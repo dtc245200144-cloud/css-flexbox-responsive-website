@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container chính bao quanh toàn trang dạng cột */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Footer */
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* Thanh Navigation */
+.nav {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Khu vực chính chứa Content & Sidebar dạng hàng */
+.main-container {
+    display: flex;
+    flex: 1; /* Chiếm toàn bộ chiều cao còn lại của container */
+}
+
+/* Content chiếm 3 phần không gian */
+.content {
+    flex: 3;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Sidebar chiếm 1 phần không gian */
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+/* RESPONSIVE CHO MOBILE (<= 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Chuyển Content & Sidebar thành hàng dọc */
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}
